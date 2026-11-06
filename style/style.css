@@ -446,7 +446,8 @@ h3 {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 10px 12px;
 
@@ -506,6 +507,12 @@ h3 {
     margin-bottom: 1.5rem;
 }
 
+.box.active .isi-tambahan {
+    max-height: 1500px;
+    opacity: 1;
+    margin-bottom: 1.5rem;
+}
+
 /* toggle */
 .toggle-content {
     display: block;
@@ -524,6 +531,11 @@ h3 {
     cursor: pointer;
     background-color: #8B6F47;
     color: #ffffff;
+}
+
+
+.hidden {
+    display: none !important;
 }
 
 /* .isi-gunung {
@@ -612,4 +624,20 @@ h3 {
     border: none;
     border-radius: 10px;
     box-shadow: 0 5px 5px rgba(89, 107, 86, 0.3);
+}
+
+.alert .pesan-error{
+    color: red;
+    font-size: smaller;
+    justify-items: center;
+    align-items: center;
+    margin: 15px 15px 0 15px;
+}
+
+.alert .pesan-sukses{
+    color: green;
+    font-size: smaller;
+    justify-items: center;
+    align-items: center;
+    margin: 15px 15px 0 15px;
 }

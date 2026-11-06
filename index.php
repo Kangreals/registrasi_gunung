@@ -81,11 +81,14 @@
                             dan gunung di indonesia memiliki ketinggian dan keindahan yang berbeda beda di setiap gunungnya.
                             <br><br>
                         </p>
-                        <input type="button" value="Selengkapnya &gt;&gt;&gt;" class="toggle-content">
+                        <input type="button" value="Lihat list &gt;&gt;&gt;" class="toggle-content" data-default="Lihat list &gt;&gt;&gt;">
                     </div>
-                    <?php 
-                        include('gunung.php');
+                    <div class="card-gunung hidden" id=card>
+                        <?php 
+                        include('gunung_810.php');
                         ?>
+                    </div>
+                    
                 </section>
 
                     <section id="registrasi">
@@ -101,8 +104,21 @@
                                 <?php
                                 include("registrasi_821.php");
                                 ?>
+
+                                <div class="alert">
+                                    <!-- Notifikasi Error  -->
+                                    <?php if (!empty($pesan_error)): ?>
+                                        <div class="pesan-error"><p><?php echo $pesan_error; ?></p></div>
+                                    <?php endif; ?>
+
+                                    <!-- Notifikasi Sukses -->
+                                    <?php if (!empty($pesan_sukses)): ?>
+                                        <div class="pesan-sukses"><p><?php echo $pesan_sukses; ?></p></div>
+                                    <?php endif; ?> 
+                                </div>
+
                             </div>
-                            <input type="button" value="Registrasi &gt;&gt;&gt;" name="btn-registrasi" class="toggle-content">
+                            <input type="button" value="Registrasi &gt;&gt;&gt;" name="btn-registrasi" class="toggle-content" data-default="Registrasi &gt;&gt;&gt;">
 
                         </div>
                     </section>

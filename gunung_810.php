@@ -27,7 +27,7 @@ $gunung = [
 
 <!-- template -->
 <div class="isi-gunung">
-    <div class="card-gunung">
+    <div class="card-gunung" id="card">
         <?php 
             foreach ($gunung as $key => $data) {
         ?>

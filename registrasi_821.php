@@ -11,39 +11,42 @@
             <input type="date" id="tanggalLahir" name="tanggalLahir" required>
         </div>
         <div class="form-group">
-            <label for="alamat">Alamat</label>
+            <label for="alamat">Alamat:</label>
             <textarea name="alamat" id="alamat" rows="4" placeholder="Masukan Alamat Lengkap Anda"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="gunung">Pilih Gunung:</label>
+            <select name="nama" id="gunung">
+                <option value="">Pilih gunung yang akan di daftarkan</option>
+                <option value="merapi">Merapi</option>
+                <option value="prau">Prau</option>
+                <option value="merbabu">Merbabu</option>
+            </select>
         </div>
         <button type="submit" id="tanggalLahir" name="tanggalLahir" class="btn-registrasi">Daftar</button>
     </form>
 
+
+
+
+    
+<!-- NOTIFIKASI -->
+
 <?php        
-        // NOTIFIKASI
-        $pesan = '';
-        $pesan_error = "";
+    $pesan = '';
+    $pesan_error = "";
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-            $nama = $_POST['nama'] ?? '';
-            $tanggalLahir = $_POST['tanggalLahir'] ?? '';
-            $alamat = $_POST['alamat'] ?? '';
+        $nama = $_POST['nama'] ?? '';
+        $tanggalLahir = $_POST['tanggalLahir'] ?? '';
+        $alamat = $_POST['alamat'] ?? '';
 
-            if (empty($nama) || empty($tanggalLahir) || empty($alamat)) {
-                $pesan_error = "Semua kolom harus diisi!";
-            } else {
-                $pesan_sukses = "Registrasi berhasil! || Selamat Datang <strong>$nama</strong>.";
-            }
+        if (empty($nama) || empty($tanggalLahir) || empty($alamat)) {
+            $pesan_error = "Semua kolom harus diisi!";
+        } else {
+            $pesan_sukses = "Registrasi berhasil! || Selamat Datang <strong>$nama</strong>.";
         }
+    }
 ?>
 
-
-<!-- Notifikasi Error  -->
-
-<?php if (!empty($pesan_error)): ?>
-    <div class="pesan-error"><?php echo $pesan_error; ?></div>
-<?php endif; ?>
-
-<!-- Notifikasi Sukses -->
-<?php if (!empty($pesan_sukses)): ?>
-    <div class="pesan-sukses"><?php echo $pesan_sukses; ?></div>
-<?php endif; ?> 

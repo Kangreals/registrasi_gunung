@@ -1,6 +1,5 @@
 const hamburger = document.getElementById("hamburgers-menu");
 const navLink = document.getElementById("nav-menu");
-const pRemove = document.getElementById("hidden");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
@@ -24,8 +23,9 @@ document.querySelectorAll(".toggle-content").forEach((link) => {
     if (box.classList.contains("active")) {
       this.value = "Tutup";
     } else {
-      this.value = "Registrasi >>>";
+      this.value = "data-default";
     }
+
   });
 });
 
@@ -40,3 +40,29 @@ if (form) {
     form.reset();
   });
 }
+
+document.querySelectorAll(".toggle-content").forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    // 1. Targetkan elemen penampung gunung berdasarkan ID-nya
+    const listGunung = document.getElementById("card");
+    
+    if (!listGunung) {
+      console.error("Elemen id='card' tidak ditemukan!");
+      return;
+    }
+
+    // 2. Lakukan toggle class hidden (muncul / sembunyi)
+    listGunung.classList.toggle("hidden");
+
+    // 3. Ubah teks tombol secara dinamis
+    if (listGunung.classList.contains("hidden")) {
+      // Jika tersembunyi, kembalikan ke teks asli dari data-default
+      this.value = this.getAttribute("data-default");
+    } else {
+      // Jika muncul, ubah teks tombol menjadi Tutup
+      this.value = "Tutup";
+    }
+  });
+});
