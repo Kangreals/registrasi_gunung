@@ -17,7 +17,7 @@
         <nav class="navbar">
             <!-- PROFILE / LOGO -->
             <div class="profile">
-                <a href="index.php">
+                <a href="index_808.php">
                     <img src="image/gunung.jpg" alt="Profile">
                 </a>
                 <span class="profile-text">Username</span>
