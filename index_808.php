@@ -40,7 +40,7 @@
                             <li><a href="#beranda">Beranda</a></li>
                             <li><a href="#list-gunung">List Gunung</a></li>
                             <li><a href="#registrasi">Registrasi</a></li>
-                            <li><a href="#profile">Profile</a></li>
+                            <li><a href="#admin">Admin</a></li>
                         </ul>
                     </div>
             </div>
@@ -62,15 +62,22 @@
             <!-- content box -->
             <div class="content-box">
 
-                <section class="profile" id="profile">
+                <section class="profile" id="admin">
                     <div class="box">
-                        <h1>Profile</h1>
-                        <p>Anda bisa lihat history anda registrasi dan mendaki gunung mana saja melalui website ini, tetapi jika anda tidak registrasi melalui website ini
-                            maka tidak akan tercatat disini. <br><br>
+                        <h1>Admin</h1>
+                        <p>Anda bisa tau siapa saja admin yang bisa dihubungi untuk pendaftaran pendakian.
+                            admin disini sangat sopan, ramah, dan <i>fast respon</i>, jadi jangan khawatir jika anda mendappat kendala
+                            saat mendaftar pendakian.
+                        </p>
+                        <p>
+                            Untuk menghubungi admin bisa langsung tekan tombol <i>Lihat Admin</i> dibawah.
                         </p>
 
-                        <input type="button" value="Lihat Profile &gt;&gt;&gt;" class="toggle-content">
+                        <?php 
+                            include('profile-kelompok4.php');
+                        ?>
 
+                        <input type="button" value="Lihat Admin &gt;&gt;&gt;" name="btn-admin" class="toggle-content" data-default="Lihat Admin &gt;&gt;&gt;">
                     </div>
                 </section>
 
@@ -81,7 +88,7 @@
                             dan gunung di indonesia memiliki ketinggian dan keindahan yang berbeda beda di setiap gunungnya.
                             <br><br>
                         </p>
-                        <input type="button" value="Lihat list &gt;&gt;&gt;" class="toggle-content" data-default="Lihat list &gt;&gt;&gt;">
+                        <input type="button" value="Lihat list &gt;&gt;&gt;" class="toggle-content" data-default="Lihat list &gt;&gt;&gt;" id="admn">
                     </div>
                     <div class="card-gunung hidden" id=card>
                         <?php 

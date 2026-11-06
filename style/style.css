@@ -3,7 +3,7 @@
     padding: 0;
     max-width: 100%;
     box-sizing: border-box;
-    font-family: 'Monserrat';
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     scrollbar-width: none;
     scroll-behavior: smooth;
     scroll-padding-top: 70px;
@@ -211,7 +211,6 @@
 
 body {
     background-color: #FDF6ED;
-    
     width: 100%;
     height: 100%;
 }
@@ -501,17 +500,37 @@ h3 {
         opacity 0.3s ease;
 }
 
-.box.active .isi-tambahan {
-    max-height: 1500px;
-    opacity: 1;
-    margin-bottom: 1.5rem;
-}
+
 
 .box.active .isi-tambahan {
     max-height: 1500px;
     opacity: 1;
     margin-bottom: 1.5rem;
 }
+
+.mhs {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 15px;
+    transition:
+        max-height 0.5s ease,
+        opacity 0.3s ease;
+}
+
+.box.active .mhs {
+    max-height: 1500px;
+    opacity: 1;
+    margin-bottom: 1.5rem;
+}
+
+.box.active .mhs {
+    max-height: 1500px;
+    opacity: 1;
+    margin-bottom: 1.5rem;
+}
+
+
 
 /* toggle */
 .toggle-content {
@@ -641,3 +660,75 @@ h3 {
     align-items: center;
     margin: 15px 15px 0 15px;
 }
+
+/* admin */
+.mhs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 40px 0 40px 0;
+
+} 
+
+.vannesa,
+.alvetta,
+.syahrial {
+    background-color: #FDF6ED;
+    min-width: 100px;
+    width: 90%;
+    border-radius: 50px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(89, 107, 86, 0.3);
+    margin: 0;
+    padding: 0;
+}
+
+.vannesa p,
+.alvetta p,
+.syahrial p {
+    display: none;
+    margin-top: 10px;
+    color: #555555;
+    font-size: 15px;
+}
+
+.vannesa:hover p,
+.alvetta:hover p,
+.syahrial:hover p {
+    display: block;
+}
+
+.vannesa:hover,
+.alvetta:hover,
+.syahrial:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+
+}
+
+
+.vannesa::after,
+.alvetta::after,
+.syahrial::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);     /* Garis awal disembunyikan (lebar 0%) */
+    height: 1px;              /* Ketebalan garis bawah */
+    bottom: 30px;                /* Posisi garis tepat di bawah teks */
+    left: 0;
+    background-color: #778873; /* Warna garis saat muncul */
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-in-out;
+}
+
+
+.vannesa:hover::after,
+.alvetta:hover::after,
+.syahrial:hover::after {
+    transform: scaleX(0.6);
+}
+
