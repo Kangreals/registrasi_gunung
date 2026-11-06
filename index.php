@@ -81,68 +81,31 @@
                             dan gunung di indonesia memiliki ketinggian dan keindahan yang berbeda beda di setiap gunungnya.
                             <br><br>
                         </p>
-
                         <input type="button" value="Selengkapnya &gt;&gt;&gt;" class="toggle-content">
                     </div>
-
-                    <div class="isi-gunung">
-                        <div class="card-gunung">
-
-                        <!-- MERAPI -->
-                            <div class="merapi">
-                                <h2>Gunung Merapi</h2>
-                                <img src="./image/gunung-merapi.jpg" alt="Gunung Merapi">
-                                <p><strong>Gunung Merapi</strong> merupakan salah satu gunung berapi/aktif di indonesia Gunung Merapi berada di Jawa Tengah, dan gunung merapi juga bersebelahan dengan gunung merbabu</p>
-                            </div>
-
-                            <!-- PRAU -->
-                            <div class="prau">
-                                <h2>Gunung Prau</h2>
-                                <img src="./image/gunung-prau.jpg" alt="Gunung Prau">
-                                <p></p>
-                            </div>
-
-                            <!-- MERBABU -->
-                            <div class="merbabu"></div>
-                        </div>
-                    </div>
+                    <?php 
+                        include('gunung.php');
+                        ?>
                 </section>
 
-                <section id="registrasi">
-                    <div class="box">
-                        <h1>Registrasi</h1>
-                        <p>Mengapa setiap naik gunung harus registrasi? Setiap pendaki gunung 
-                            wajib melakukan <b>Registrasi</b>/<b>SIMAKSI</b> (Surat Izin Masuk Kawasan Konservasi)
-                            demi keselamatan, pengendalian lingkungan, dan tata kelola pendakian. <br><br>
-                        </p>
+                    <section id="registrasi">
+                        <div class="box">
+                            <h1>Registrasi</h1>
+                            <p>Mengapa setiap naik gunung harus registrasi? Setiap pendaki gunung 
+                                wajib melakukan <b>Registrasi</b>/<b>SIMAKSI</b> (Surat Izin Masuk Kawasan Konservasi)
+                                demi keselamatan, pengendalian lingkungan, dan tata kelola pendakian. <br><br>
+                            </p>
 
-                        <div class="isi-tambahan">
-                            <h3>Form Registrasi pendakian</h3>
+                            <div class="isi-tambahan">
+                                <h3>Form Registrasi pendakian</h3>
+                                <?php
+                                include("registrasi_821.php");
+                                ?>
+                            </div>
+                            <input type="button" value="Registrasi &gt;&gt;&gt;" name="btn-registrasi" class="toggle-content">
 
-                            <form action="registrasi.php" method="POST" class="form-registrasi">
-                                <div class="form-group">
-                                    <label for="nama">Nama Lengkap  :</label>
-                                    <input type="text" id="nama" placeholder="Masukan Nama Lengkap" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="tanggalLahir">Tanggal lahir :</label>
-                                    <input type="date" id="tanggalLahir" name="tangal-lahir" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="alamat">Alamat</label>
-                                    <textarea name="alamat" id="alamat" rows="4" placeholder="Masukan Alamat Lengkap Anda"></textarea>
-                                </div>
-
-                                <button type="submit" id="tangglLahir" name="tanggalLahir" class="btn-registrasi">Daftar</button>
-                            </form>
                         </div>
-
-                        <input type="button" value="Registrasi &gt;&gt;&gt;" name="btn-registrasi" class="toggle-content">
-
-                    </div>
-                </section>
+                    </section>
             </div>
 
             <!-- end content -->
