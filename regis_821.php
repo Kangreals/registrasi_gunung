@@ -35,20 +35,18 @@ $mountains = [
 
 <!-- template -->
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="navbar-logo">🗻 PetaPendaki</a>
-            <ul class="navbar-menu">
-                <li><a href="kelompok4.php?page=kelompok">Beranda</a></li>
-                <li><a href="gunung_810.php?page=gunung_810">List Gunung</a></li>
-                <li><a href="regis_821.php?page=registrasi_821">Registrasi</a></li>
-                <li><a href="list_logistik_810.php?page=list_logistik_810">List Logistik</a></li>
-                <li><a href="pembayaran_808.php?page=registrasi_808">Pembayaran</a></li>
-                <li><a href="admin_808.php?page=admin_808">Panel Admin</a></li>
-            </ul>
-        </div>
-    </nav>
+
+    <?php 
+        if($_GET['page']=="regis_821") {
+            include("regis_821.php");
+        } elseif ($_GET['page'] == "logistik_810") {
+            include("list_logistik_821.php");
+        } elseif ($_GET['page'] == "pembayaran_808") {
+            include("pembayaran_808.php");
+        } else {
+            echo '<script>console.log("page tidak ditemukan")</script>';
+        }
+        ?>
 
 
 <link rel="stylesheet" href="./style/kelompok4.css">
@@ -73,7 +71,7 @@ $mountains = [
             </div>
         <?php endif; ?>
 
-<section id="registrasi_821" class="card_821">
+            <section id="regis_821" class="card_821">
                 <h2 class="section-title">Formulir Pendaftaran</h2>
                 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>?page=regis_821#alert" method="POST">
                     

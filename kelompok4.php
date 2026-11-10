@@ -2,6 +2,7 @@
 // Set timezone
 date_default_timezone_set('Asia/Jakarta');
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -17,15 +18,17 @@ date_default_timezone_set('Asia/Jakarta');
         <div class="navbar-container">
             <a href="#" class="navbar-logo">🗻 PetaPendaki</a>
             <ul class="navbar-menu">
-                <li><a href="kelompok4.php?page=kelompok">Beranda</a></li>
-                <li><a href="gunung_810.php?page=gunung_810">List Gunung</a></li>
-                <li><a href="regis_821.php?page=registrasi_821">Registrasi</a></li>
-                <li><a href="list_logistik_810.php?page=list_logistik_810">List Logistik</a></li>
-                <li><a href="pembayaran_808.php?page=registrasi_808">Registrasi</a></li>
-                <li><a href="admin_808.php?page=admin_808">Panel Admin</a></li>
+                <li><a href="kelompok4.php#beranda_kelompok4">Beranda</a></li>
+                <li><a href="kelompok4.php#gunung_810">List Gunung</a></li>
+                <li><a href="kelompok4.php?page=registrasi#regis_821">Registrasi</a></li>
+                <li><a href="kelompok4.php?page=logistik#logistik_810">List Logistik</a></li>
+                <li><a href="kelompok4.php?page=bayar#pembayaran_808">Pembayaran</a></li>
+                <li><a href="kelompok4.php#admin_808">Panel Admin</a></li>
             </ul>
+
         </div>
     </nav>
+
 
     <!-- HERO SECTION -->
     <header class="hero_kelompok4" id="beranda_kelompok4">
@@ -35,25 +38,30 @@ date_default_timezone_set('Asia/Jakarta');
 
     <main class="container">
 
-        <div class="grid-two-columns">
-            
-            <?php 
-                if($_GET) {
-                if($_GET["page"]=="gunung_810") {
-                    include("gunung_810.php");
-                } else if($_GET["page"]=="regis_821") {
-                    include("regis_821.php");
-                } else if($_GET["page"]=="admin_808") {
-                    include("admin_808.php");
-                } else if($_GET["page"]=="kelompok4") {
-                    include("kelompok4.php");
-                } else {
-                    echo "halaman tidak ditemukan";
-                }
-                }
-            ?>
+        <div class="main-content-stream-kelompok4">
+
+            <section id="gunung_810">
+                <?php include('gunung_810.php'); ?>
+            </section>
+
+            <section id="admin_808">
+                <?php include('admin_808.php'); ?>
+            </section>
 
         </div>
+
+        <?php 
+        if (isset($_GET['page'])) {
+        if ($_GET['page'] == 'registrasi') {
+            include("regis_821.php");
+        } elseif ($_GET['page'] == 'logistik') {
+            include("list_logistik_810.php");
+        } elseif ($_GET['page'] == 'bayar') {
+            include("pembayaran_808.php");
+        }
+        }
+
+        ?>
     </main>
 
     <footer>

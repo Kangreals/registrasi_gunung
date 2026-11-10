@@ -35,21 +35,6 @@ $mountains = [
 
 <!-- template -->
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="navbar-logo">🗻 PetaPendaki</a>
-            <ul class="navbar-menu">
-                <li><a href="kelompok4.php?page=kelompok">Beranda</a></li>
-                <li><a href="gunung_810.php?page=gunung_810">List Gunung</a></li>
-                <li><a href="regis_821.php?page=registrasi_821">Registrasi</a></li>
-                <li><a href="list_logistik_810.php?page=list_logistik_810">List Logistik</a></li>
-                <li><a href="pembayaran_808.php?page=registrasi_808">Registrasi</a></li>
-                <li><a href="admin_808.php?page=admin_808">Panel Admin</a></li>
-            </ul>
-        </div>
-    </nav>
-
             <link rel="stylesheet" href="./style/kelompok4.css">
             <section id="gunung_tujuan_810" class="card_810">
                 <h2 class="section-title_810">Daftar Gunung Tersedia</h2>

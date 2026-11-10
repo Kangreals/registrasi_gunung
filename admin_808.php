@@ -5,41 +5,33 @@ $admins = [
         'nim' => '2513010808',
         'nama' => 'Vannesa Alma Azahra',
         'peran' => 'Super Admin / Database Administrator',
-        'email' => 'admin808@pendakian4.com'
+        'email' => 'admin808@pendakian4.com',
+        'image' => './image/vannesa.jpg'
     ],
     [
         'nim' => '2513010810',
         'nama' => 'Alvetta Wahyu Anggara',
         'peran' => 'Web Developer / System Analyst',
-        'email' => 'admin810@pendakian4.com'
+        'email' => 'admin810@pendakian4.com',
+        'image' => './image/alvetta.jpg'
     ],
     [
         'nim' => '2513010821',
         'nama' => 'Syahrial Ristatanto Qolbi Al Hafizh',
         'peran' => 'UI/UX Designer / Security Operations',
-        'email' => 'admin821@pendakian4.com'
+        'email' => 'admin821@pendakian4.com',
+        'image' => './image/syahrial.jpg'
     ]
 ];
 ?>
 
 <!-- template -->
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="navbar-logo">🗻 PetaPendaki</a>
-            <ul class="navbar-menu">
-                <li><a href="kelompok4.php?page=kelompok">Beranda</a></li>
-                <li><a href="gunung_810.php?page=gunung_810">List Gunung</a></li>
-                <li><a href="regis_821.php?page=registrasi_821">Registrasi</a></li>
-                <li><a href="list_logistik_810.php?page=list_logistik_810">List Logistik</a></li>
-                <li><a href="pembayaran_808.php?page=registrasi_808">Registrasi</a></li>
-                <li><a href="admin_808.php?page=admin_808">Panel Admin</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
+        <!-- BOOTSTRAP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+        <!-- BOOTSTRAP -->
+        
         <link rel="stylesheet" href="./style/kelompok4.css">
         <section id="admin_808" class="admin-section_808">
             <h2 class="section-title" style="border-bottom-color: var(--accent-color);">Panel Administrator (Kelompok 4)</h2>
@@ -48,6 +40,25 @@ $admins = [
             <div class="admin-grid_808">
                 <?php foreach ($admins as $admin): ?>
                     <div class="admin-card_808">
+                        <img src="<?php echo $admin['image'] ?>" 
+                        class="img-<?php echo $admin['nim'] ?> <?php 
+                            // Dibuat satu per satu untuk setiap NIM
+                            if ($admin['nim'] === '2513010808') {
+                                echo 'rounded-circle border border-secondary shadow-sm'; // Bulat untuk Vannesa
+                            } 
+                            
+                            if ($admin['nim'] === '2513010810') {
+                                echo 'rounded-circle border border-secondary shadow-sm'; // Bulat untuk Alvetta
+                            } 
+                            
+                            if ($admin['nim'] === '2513010821') {
+                                echo 'rounded-3 border border-secondary shadow-sm'; // Kotak untuk Syahrial
+                            } 
+                        ?>" 
+                        style="width: 150px; height: 150px; object-fit: cover;">
+
+
+                        <br>
                         <span class="nim-badge_808">NIM: <?php echo $admin['nim']; ?></span>
                         <h4><?php echo $admin['nama']; ?></h4>
                         <p style="font-size: 14px; font-weight: 600; color: var(--accent-color); margin-bottom: 5px;">

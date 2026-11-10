@@ -4,20 +4,18 @@
 
 <!-- template -->
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="navbar-logo">🗻 PetaPendaki</a>
-            <ul class="navbar-menu">
-                <li><a href="kelompok4.php?page=kelompok">Beranda</a></li>
-                <li><a href="gunung_810.php?page=gunung_810">List Gunung</a></li>
-                <li><a href="regis_821.php?page=registrasi_821">Registrasi</a></li>
-                <li><a href="list_logistik_810.php?page=list_logistik_810">List Logistik</a></li>
-                <li><a href="pembayaran_808.php?page=registrasi_808">Registrasi</a></li>
-                <li><a href="admin_808.php?page=admin_808">Panel Admin</a></li>
-            </ul>
-        </div>
-    </nav>
+
+    <?php 
+        if($_GET['page']=='regis_821') {
+            include('regis_821.php');
+        } elseif ($_GET['page'] == 'logistik_810') {
+            include('list_logistik_821.php');
+        } elseif ($_GET['page'] == 'pembayaran_808') {
+            include('pembayaran_808.php');
+        } else {
+            echo '<script>console.log("page tidak ditemukan")</script>';
+        }
+        ?>
 
     <?php
         $success_message = "";
@@ -37,7 +35,7 @@
         <?php endif; ?>
 
 <link rel="stylesheet" href="./style/kelompok4.css">
-<section id="pembayaran_section" class="card_810" style="grid-column: span 2;">
+<section id="pembayaran_808" class="card_810" style="grid-column: span 2;">
     <h2 class="section-title">Formulir Konfirmasi Pembayaran SIMAKSI</h2>
     <p style="color: var(--text-light); margin-bottom: 20px;">
         Silakan unggah bukti transfer perizinan pendakian Anda. Pastikan nominal sesuai dengan tarif gunung tujuan yang dipilih.

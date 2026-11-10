@@ -18,11 +18,18 @@
             scrollbar-width: none;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--bg-light);
+            min-height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
         }
 
         /* Navbar Style */
@@ -35,12 +42,13 @@
         }
 
         .navbar-container {
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 100%;                  /* Memaksa lebar 100% memenuhi layar */
+            max-width: none;              /* Menghapus batasan lebar maksimal (1200px) */
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Mendorong logo ke kiri pojok dan menu ke kanan pojok */
             align-items: center;
-            padding: 15px 20px;
+            padding: 15px 30px;           /* Memberikan sedikit jarak aman 30px di pojok kanan-kiri */
+            box-sizing: border-box;
         }
 
         .navbar-logo {
@@ -48,6 +56,7 @@
             font-size: 24px;
             font-weight: bold;
             text-decoration: none;
+            margin-right: 20px;
         }
 
         .navbar-menu {
@@ -76,15 +85,27 @@
             color: var(--white);
             text-align: center;
             padding: 60px 20px;
+            width: 100vw;
+            min-height: 100vh;
+            
+            display: flex;
+            flex-direction: column;    /* Menyusun teks h1 dan p secara vertikal ke bawah */
+            justify-content: center;   /* Mengetengahkan secara vertikal (atas-bawah) */
+            align-items: center;       /* Mengetengahkan secara horizontal (kanan-kiri) */
+            text-align: center;        /* Memastikan baris teks di dalam rata tengah */
+            
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
         }
 
-        .hero h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+        .hero_kelompok4 h1 {
+            font-size: 3rem; /* Memperbesar ukuran judul */
+            margin-bottom: 15px;
         }
 
-        .hero p {
-            font-size: 18px;
+        .hero_kelompok4 p {
+            font-size: 1.5rem;
             opacity: 0.9;
         }
 
@@ -93,6 +114,11 @@
             max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
+        }
+
+        section {
+            scroll-margin-top: 80px;
+            padding: 40px 0;
         }
 
         .section-title {
@@ -105,11 +131,18 @@
         }
 
         /* Section Layouts */
-        .grid-two-columns {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
+        .main-content-stream-kelompok4 {
+            display: flex;
+            flex-direction: column; 
+            gap: 50px;              
             margin-bottom: 60px;
+        }
+
+        .main-content-stream-kelompok4 section {
+            width: 100%;
+            display: block;
+            scroll-margin-top: 100px; /* Jarak scroll agar tidak tertutup navbar */
+            padding: 20px 0;
         }
 
         @media (min-width: 768px) {
@@ -120,6 +153,14 @@
 
         /* Cards and Lists styling */
         .card_810 {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .card_821 {
             background: var(--white);
             border-radius: 8px;
             padding: 25px;
