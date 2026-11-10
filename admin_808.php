@@ -2,14 +2,14 @@
 // Data Anggota Kelompok (Admin) berdasarkan NIM yang diminta
 $admins = [
     [
-        'nim' => '808',
-        'nama' => 'Rangga Wijaya',
+        'nim' => '2513010808',
+        'nama' => 'Vannesa Alma Azahra',
         'peran' => 'Super Admin / Database Administrator',
         'email' => 'admin808@pendakian4.com'
     ],
     [
-        'nim' => '810',
-        'nama' => 'Siti Nurhaliza',
+        'nim' => '2513010810',
+        'nama' => 'Alvetta Wahyu Anggara',
         'peran' => 'Web Developer / System Analyst',
         'email' => 'admin810@pendakian4.com'
     ],
