@@ -23,6 +23,24 @@ $admins = [
 ?>
 
 <!-- template -->
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">🗻 PetaPendaki</a>
+            <ul class="navbar-menu">
+                <li><a href="kelompok4.php?page=kelompok">Beranda</a></li>
+                <li><a href="gunung_810.php?page=gunung_810">List Gunung</a></li>
+                <li><a href="regis_821.php?page=registrasi_821">Registrasi</a></li>
+                <li><a href="list_logistik_810.php?page=list_logistik_810">List Logistik</a></li>
+                <li><a href="pembayaran_808.php?page=registrasi_808">Registrasi</a></li>
+                <li><a href="admin_808.php?page=admin_808">Panel Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+        <link rel="stylesheet" href="./style/kelompok4.css">
         <section id="admin_808" class="admin-section_808">
             <h2 class="section-title" style="border-bottom-color: var(--accent-color);">Panel Administrator (Kelompok 4)</h2>
             <p style="color: var(--text-light);">Hak akses kelola data validasi perizinan pendaki dipegang oleh tim admin terdaftar di bawah ini:</p>
